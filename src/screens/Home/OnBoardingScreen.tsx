@@ -7,7 +7,6 @@ import SocialButton from '../../components/SocialButton';
 
 const OnBoardingScreen = () => {
   return (
-    <View>
         <View style={onBoardingStyles.onBoardingContainer}>
             <View>
                 <Image source={PlayImg} style={onBoardingStyles.playImg} />
@@ -39,7 +38,6 @@ const OnBoardingScreen = () => {
             </View>
             </View>
         </View>
-    </View>
   );
 };
 

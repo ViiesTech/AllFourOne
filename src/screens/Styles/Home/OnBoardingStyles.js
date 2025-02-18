@@ -3,8 +3,7 @@ import { responsiveHeight } from "../../../helper/responsive";
 
 export const onBoardingStyles = StyleSheet.create({
     onBoardingContainer: {
-        // height: responsiveHeight(100),
-        flex: 1,
+        height: responsiveHeight(100),
     },
     playImg:{
         width: responsiveHeight(50),
@@ -56,6 +55,8 @@ export const onBoardingStyles = StyleSheet.create({
         lineHeight: 16,
         letterSpacing: 0,
         textAlign: 'center',
-        color: '#82858C'
+        color: '#82858C',
+        marginHorizontal: responsiveHeight(1),
+        marginVertical: responsiveHeight(2),
     }
 });
