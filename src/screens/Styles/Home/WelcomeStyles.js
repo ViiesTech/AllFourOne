@@ -33,7 +33,7 @@ export const WelcomeStyles = StyleSheet.create({
     labelThreeContainer: {
         position: 'absolute',
         top: 0,
-        right: 90,
+        right: 14,
         zIndex: 999
     },
     personeThreeContainer: {

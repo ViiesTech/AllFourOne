@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
 import WelcomeScreenLabel from '../../components/WelcomeScreenLabel';
-import { WelcomeStyles } from '../Styles/Home/WelcomeScreen';
+import { WelcomeStyles } from '../Styles/Home/WelcomeStyles';
 import PersoneOne from '../../assets/images/personeOne.png';
 import PersoneTwo from '../../assets/images/personeTwo.png';
 import PersoneThree from '../../assets/images/personeThree.png';
