@@ -3,7 +3,8 @@ import { responsiveHeight } from "../../../helper/responsive";
 
 export const WelcomeStyles = StyleSheet.create({
     welcomeScreenContainer: {
-        flex: 1,
+        // flex: 1,
+        height: responsiveHeight(100),
         backgroundColor: '#587909',
     },
     labelOneContainer: {
@@ -46,7 +47,7 @@ export const WelcomeStyles = StyleSheet.create({
         paddingHorizontal: responsiveHeight(3),
     },
     walletContainer: {
-        paddingTop: responsiveHeight(20),
+        paddingTop: responsiveHeight(10),
         marginLeft: -10,
     },
     welcomeTxt: {
@@ -76,4 +77,7 @@ export const WelcomeStyles = StyleSheet.create({
         letterSpacing: 0,
         color: '#F5F5F5'
     },
+    getStartedButton:{
+    marginTop: responsiveHeight(6)
+    }
 })

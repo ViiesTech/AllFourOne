@@ -6,14 +6,12 @@ import PersoneOne from '../../assets/images/personeOne.png';
 import PersoneTwo from '../../assets/images/personeTwo.png';
 import PersoneThree from '../../assets/images/personeThree.png';
 import Wallet from '../../assets/images/wallet.png';
+import MyButton from '../../components/MyButton';
 
 const WelcomeScreen = () => {
   return (
     <View style={WelcomeStyles.welcomeScreenContainer}>
         <View>
-        {/* <View style={WelcomeStyles.labelOneContainer}>
-        </View> */}
-
         <View style={WelcomeStyles.personeOneContainer}>
             <View style={WelcomeStyles.labelOneContainer}>
                  <WelcomeScreenLabel label='Send' title='$29.00' />
@@ -46,11 +44,10 @@ const WelcomeScreen = () => {
             <Text style={WelcomeStyles.yourBestTxt}>Your Best Money Transfer Partner.</Text>
         </View>
 
-        <View>
-            <TouchableOpacity>
-                <Text>Get Started</Text>
-            </TouchableOpacity>
-        </View>
+            <View style={WelcomeStyles.getStartedButton}>
+                <MyButton  label='Get Started' />
+            </View>
+       
         </View>
         </View>
     </View>
