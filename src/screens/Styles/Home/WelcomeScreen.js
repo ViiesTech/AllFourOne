@@ -5,7 +5,6 @@ export const WelcomeStyles = StyleSheet.create({
     welcomeScreenContainer: {
         // flex: 1,
         height: responsiveHeight(100),
-        backgroundColor: '#587909',
     },
     labelOneContainer: {
         position: 'absolute',
@@ -47,7 +46,7 @@ export const WelcomeStyles = StyleSheet.create({
         paddingHorizontal: responsiveHeight(3),
     },
     walletContainer: {
-        paddingTop: responsiveHeight(10),
+        paddingTop: responsiveHeight(20),
         marginLeft: -10,
     },
     welcomeTxt: {

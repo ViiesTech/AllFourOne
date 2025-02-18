@@ -1,5 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, } from 'react-native';
+import CheckmarkIcon from './CheckMarkIcon';
+import LinearGradient from 'react-native-linear-gradient';
 // import  {  SvgUri } from 'react-native-svg';
 
 // Define the props interface correctly
@@ -12,9 +14,9 @@ const WelcomeScreenLabel: React.FC<WcProp> = ({ title, label }) => {
   return (
     <View style={styles.container}>
         <View style={styles.mainContainer}>
-            {/* <View style={{backgroundColor: 'white'}}>
-            <SvgUri width={20} height={20} uri={require('../assets/images/CorrectImg.svg')} />
-                    </View> */}
+              <LinearGradient start={{x: 0, y: 2}} end={{x: 1, y: 1.5}} colors={['#F96F0D', '#F96F0D', '#C60E0E']} style={styles.linearGradient}>
+            <CheckmarkIcon />
+            </LinearGradient>
             <View>
                 <Text style={styles.title}>{label}</Text>
                 <Text style={styles.label}>{title}</Text>
@@ -27,7 +29,7 @@ const WelcomeScreenLabel: React.FC<WcProp> = ({ title, label }) => {
 const styles = StyleSheet.create({
     container: {
       paddingVertical: 10,
-      paddingHorizontal: 18,
+      paddingHorizontal: 12,
       backgroundColor: 'rgba(38, 42, 52, 1)',
       borderRadius: 40,
       width: 150,
@@ -48,6 +50,14 @@ const styles = StyleSheet.create({
       color: '#b3b3b3',
       fontFamily: 'Poppins',
     },
+    linearGradient:{
+      width: 30,
+      height: 'auto',
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: 50,
+      marginRight: 4
+    }
   });
 
 export default WelcomeScreenLabel;
