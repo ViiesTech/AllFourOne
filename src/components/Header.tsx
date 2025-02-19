@@ -3,6 +3,7 @@ import React from 'react';
 import { BoldText } from '../components/TextStyles';
 import SVGXml from './SVGIcons';
 import { menu } from '../assets/icons';
+import { useNavigation } from '@react-navigation/native';
 interface HeaderProps {
   title: string,
   isRightIcon?: boolean,
@@ -11,9 +12,10 @@ interface HeaderProps {
   justify?: string,
 }
 const Header: React.FC<HeaderProps> = ({ title, isRightIcon, justify, flex, rightIconName }) => {
+  const navigation = useNavigation()
   return (
-    <View style={{ flexDirection: 'row', justifyContent: isRightIcon ? 'space-between' : null, alignItems: 'center' }}>
-      <TouchableOpacity style={{ justifyContent: justify, flex: flex }}>
+    <View style={{ flexDirection: 'row', justifyContent: isRightIcon ? 'space-between' : null, alignItems: 'center' , padding: 20, }}>
+      <TouchableOpacity onPress={()=> navigation.openDrawer()} style={{ justifyContent: justify, flex: flex }}>
         <SVGXml icon={menu} height={20} width={20} />
       </TouchableOpacity>
       <BoldText title={title} fontSize={2.5} fontWeight="600" color="#fff" />

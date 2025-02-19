@@ -2,12 +2,14 @@ import { View, Text, ImageBackground, Image, FlatList, TouchableOpacity, ScrollV
 import React from 'react'
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from '../../helper/responsive'
 
-const Home = () => {
+const Home = ({navigation}:{navigation}) => {
   return (
     <ImageBackground source={require('../../assets/images/homebg.png')} style={{flex:1, backgroundColor:"black"}}>
         <ScrollView contentContainerStyle={{flexGrow:1}}>
         <View style={{flexDirection:'row', alignItems:'center', justifyContent:'space-between', padding:20}}>
+            <TouchableOpacity onPress={()=> navigation.openDrawer()}>
             <Image source={require('../../assets/images/personeOne.png')} style={{height:30, width:30, resizeMode:'contain'}}/>
+            </TouchableOpacity>
             <Image source={require('../../assets/images/noti.png')} style={{height:20, width:20, resizeMode:'contain'}}/>
         </View>
         

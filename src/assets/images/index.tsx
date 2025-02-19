@@ -8,4 +8,5 @@ export default images = {
   venmo: require('./venmo.png'),
   visa: require('./visa.png'),
   americanExpress: require('./americanExpress.png'),
+  statistics: require('../images/statistics.png'),
 };
