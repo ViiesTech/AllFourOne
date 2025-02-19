@@ -9,7 +9,7 @@ import Wallet from '../../assets/images/wallet.png';
 import MyButton from '../../components/MyButton';
 import LinearGradient from 'react-native-linear-gradient';
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({navigation}:{navigation}) => {
   return (
     <LinearGradient start={{x: 0, y: 1}} end={{x: 1, y: 1}} locations={[0,0.5,2]} colors={['#000000', '#36353E', '#FE0879']} style={WelcomeStyles.welcomeScreenContainer}>
     <View style={WelcomeStyles.welcomeScreenContainer}>
@@ -47,7 +47,7 @@ const WelcomeScreen = () => {
         </View>
 
             <View style={WelcomeStyles.getStartedButton}>
-                <MyButton  label='Get Started' />
+                <MyButton  onPress={()=> navigation.navigate("Login")}  label='Get Started' />
             </View>
        
         </View>

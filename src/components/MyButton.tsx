@@ -5,11 +5,12 @@ import { responsiveHeight } from '../helper/responsive';
 
 interface MyButtonProps {
     label: string;
+    onPress: () => void
 }
 
-const MyButton: React.FC<MyButtonProps> = ({label}) => {
+const MyButton: React.FC<MyButtonProps> = ({label, onPress}) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={onPress}>
     <LinearGradient start={{x: 0, y: 2}} end={{x: 1, y: 1}} colors={['#F96F0D', '#F96F0D', '#C60E0E']} style={styles.linearGradient}>
     <Text style={styles.buttonText}>
       {label}
